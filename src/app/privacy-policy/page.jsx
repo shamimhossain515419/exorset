@@ -1,6 +1,6 @@
 import React from "react";
 import PrivacyPolicy from "@/components/privacy-policy/PrivacyPolicy";
-export async function generateMetadata({ params }) {
+export async function generateMetadata() {
   return {
     title: 'Privacy policy || Exorset',
   }
