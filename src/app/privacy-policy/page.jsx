@@ -1,10 +1,14 @@
 import React from "react";
 import PrivacyPolicy from "@/components/privacy-policy/PrivacyPolicy";
-
+export async function generateMetadata({ params }) {
+  return {
+    title: 'Privacy policy || Exorset',
+  }
+}
 const page = async () => {
   try {
     const res = await fetch(
-      `http://localhost:5003/api/v1/privacyPolicy/get`,
+      `https://www.exorset.com/api/v1/privacyPolicy/get`,
       {
         next: {
           revalidate: 30,
