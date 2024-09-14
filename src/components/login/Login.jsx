@@ -18,17 +18,14 @@ const Login = () => {
   const onSubmit = async (data) => {
     setLoading(true);
     try {
-      const response = await fetch(
-        "https://www.exorset.com/api/v1/users/login",
-        {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-          credentials: 'include',
-        }
-      );
+      const response = await fetch("http://localhost:5003/api/v1/users/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+        credentials: "include",
+      });
 
       const result = await response.json();
       if (response.ok == true) {

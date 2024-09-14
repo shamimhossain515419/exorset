@@ -1,7 +1,11 @@
+"use client";
+import { useGetUsersInfoQuery } from "@/redux/api/usersApi";
 import Image from "next/image";
 import React from "react";
 
 const Profile = () => {
+  const { data } = useGetUsersInfoQuery();
+  console.log(data);
   
   return (
     <div>
@@ -21,7 +25,7 @@ const Profile = () => {
                 />
               </div>
               <h1 className="text-gray-900 font-bold text-xl leading-8 my-1">
-              Janes  Doe 
+                Janes Doe
               </h1>
 
               <p className="text-sm text-gray-500 hover:text-gray-600 leading-6">
